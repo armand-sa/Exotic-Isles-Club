@@ -165,7 +165,6 @@ p {
 nav {
 	position: fixed;
 	z-index: 999;
-
 	height: 5.625rem; /* 90px */
 	top: 1.875rem; /* 30px */
 	width: 100%;
