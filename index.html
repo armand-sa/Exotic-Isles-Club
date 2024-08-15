@@ -54,60 +54,63 @@
 <body>
 
   <!-- --------------------------------------------- -->
-  <!-- Grid Container -->
+  <!-- Hero Section & Navbar -->
   <!-- --------------------------------------------- -->
-  <div id="grid-container">
-
-
-    <!-- --------------------------------------------- -->
-    <!-- Navbar & Hero Section -->
-    <!-- --------------------------------------------- -->
-    <header id="video-header">
+  <header id="hero">
 
       <!-- Fixed Navbar -->
-      <nav>
+      <nav aria-label="Main Navigation">
 
       </nav>
 
-      <!-- Hero Section - Video -->
-      <section id="#hero">
+      <!-- Video -->
+      <!-- Video is decorative, so attribute of aria-hidden="true" -->
+      <video aria-hidden="true" autoplay muted loop controls class="background-video">
+        <!-- MP4 Video Source -->
+        <source src="./assets/videos/island-video.mp4" type="video/mp4">
+      </video>
 
-        <!-- Background Video with Image Fallback -->
-        <video autoplay muted loop controls id="background-video">
-          <!-- MP4 Video Source -->
-          <source src="./assets/videos/island-video.mp4" type="video/mp4">
-        </video>
-
-      </section>
-
-    </header>
+  </header>
     
+  <!-- --------------------------------------------- -->
+  <!-- Main & Footer Content - Scroll Over Content -->
+  <!-- --------------------------------------------- -->
+  <div class="scroll-over-content">
 
     <!-- --------------------------------------------- -->
-    <!-- Main Section -->
+    <!-- Grid Container: Columns: 12 | Gap: 30px | Max-Width: 1920px -->
     <!-- --------------------------------------------- -->
-    <main>
+    <div class="grid-container">
 
-      <section>
+      <!-- --------------------------------------------- -->
+      <!-- Main Section -->
+      <!-- --------------------------------------------- -->
+      <main>
 
-      </section>
+        <section>
 
-    </main>
+        </section>
 
-    <!-- --------------------------------------------- -->
-    <!-- Footer Section -->
-    <!-- --------------------------------------------- -->
-    <footer>
-      <nav id="contact">
+      </main>
 
-      </nav>
-      <nav class="legal">
+      <!-- --------------------------------------------- -->
+      <!-- Footer Section -->
+      <!-- --------------------------------------------- -->
+      <footer>
+        <nav id="contact">
 
-      </nav>
-    </footer>
+        </nav>
+        <nav class="legal">
 
-  <!-- END: Grid Container -->
+        </nav>
+      </footer>
+
+    <!-- END: Grid Container -->
+    </div>
+  
+  <!-- END: Scroll Over Content -->
   </div>
+
   
 </body>
 </html>

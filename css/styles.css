@@ -36,6 +36,8 @@ body {
 	line-height: 1.3;
 	/* Typographic Color */
 	color: var(--text-dark);
+	/* Fix horizontal overflow */
+	overflow-x: hidden;
 }
 
 /* Heading Styles */
@@ -130,44 +132,43 @@ p {
 /* Links */
 
 /* --------------------------------------------- */
-/* Grid Container for entire page */
-/* --------------------------------------------- */
-/* #grid-container {
-
-} */
-
-/* --------------------------------------------- */
 /* Hero Section & Navbar */
 /* --------------------------------------------- */
 
-/* Hero Section - with Fallback image for video */
-#video-header {
-	/* image */
+/* Fallback image if video doesn't play */
+#hero {
+	/* header to stick at the top as you scroll */
+	position: sticky;
+	top: 0;
+	z-index: 1;
 	background-image: url(../assets/videos/island-video-fallback.webp);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	overflow: hidden;
-	/* Size */
 	height: 100vh;
-	width: 100vw;
-	/* Ensure the header is on top of the body background */
-	z-index: 1;
-	position: relative;
+	width: 100%;
 }
 
-/* Video Styles */
-#background-video {
-	/* Position and size */
+/* Video over image */
+#hero .background-video {
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	object-fit: cover;
-	/* Ensure video is in front of the header background but behind other content */
-	z-index: 2;
-	/* Hide the video if it doesn't load */
-	display: block;
+}
+
+/* --------------------------------------------- */
+/* Main & Footer Content - Scroll Over Content */
+/* --------------------------------------------- */
+.scroll-over-content {
+	position: relative;
+	z-index: 4;
+	background-color: #053D42;
+	width: 100%;
+	/* Remove the fixed height to allow scrolling */
+	height: auto;
+	min-height: 100vh; /* Ensure it still takes up full height if content is minimal */
 }
