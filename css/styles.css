@@ -3,7 +3,6 @@
 /* --------------------------------------------- */
 
 /* Root Styles*/
-
 :root {
 	/* Fonts */
 	--heading-font: "Playfair Display", serif;
@@ -15,10 +14,11 @@
 	--dark-teal: #053D42;
 	--light-teal: #315E62;
 	--light-mint: #A6DDDD;
+	--white: #FFF;
+	--black: #000;
 }
 
 /* HTML & Body Styles */
-
 html {
 	background-color: var(--body-color);
 	scroll-behavior: smooth;
@@ -41,7 +41,6 @@ body {
 }
 
 /* Heading Styles */
-
 h1,
 h2,
 h3,
@@ -131,16 +130,17 @@ p {
 
 /* Links */
 
+
 /* --------------------------------------------- */
 /* Hero Section & Navbar */
 /* --------------------------------------------- */
 
 /* Fallback image if video doesn't play */
 #hero {
-	/* header to stick at the top as you scroll */
+	/* Header to stick at the top as you scroll */
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: auto;
 	background-image: url(../assets/videos/island-video-fallback.webp);
 	background-position: center;
 	background-size: cover;
@@ -160,15 +160,42 @@ p {
 	object-fit: cover;
 }
 
+/* Navbar */
+
+nav {
+	position: fixed;
+	z-index: 999;
+
+	height: 5.625rem; /* 90px */
+	top: 1.875rem; /* 30px */
+	width: 100%;
+	max-width: 90rem; /* 1440px */
+	border-radius: 50px; /* 50px */
+	border: 1px solid var(--white);
+	background-color: var(--light-teal);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* 
+	Center the nav horizontally in the viewport
+	when using position: fixed; (which positions 
+	the element relative to the viewport).
+	*/
+	left: 50%;
+  transform: translateX(-50%);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+
 /* --------------------------------------------- */
-/* Main & Footer Content - Scroll Over Content */
+/* Main & Footer Content - Scroll Over Hero */
 /* --------------------------------------------- */
 .scroll-over-content {
 	position: relative;
 	z-index: 4;
-	background-color: #053D42;
 	width: 100%;
 	/* Remove the fixed height to allow scrolling */
 	height: auto;
 	min-height: 100vh; /* Ensure it still takes up full height if content is minimal */
+	background-color: var(--body-color);
 }
