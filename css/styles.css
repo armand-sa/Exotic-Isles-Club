@@ -80,7 +80,7 @@ p {
 }
 
 /* Biggest Tablet Portrait Sizes */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1024px) {
   h1 {
     font-size: 4rem; /* 64px */
   }
@@ -128,3 +128,46 @@ p {
 /* Buttons */
 
 /* Links */
+
+/* --------------------------------------------- */
+/* Grid Container for entire page */
+/* --------------------------------------------- */
+/* #grid-container {
+
+} */
+
+/* --------------------------------------------- */
+/* Hero Section & Navbar */
+/* --------------------------------------------- */
+
+/* Hero Section - with Fallback image for video */
+#video-header {
+	/* image */
+	background-image: url(../assets/videos/island-video-fallback.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	/* Size */
+	height: 100vh;
+	width: 100vw;
+	/* Ensure the header is on top of the body background */
+	z-index: 1;
+	position: relative;
+}
+
+/* Video Styles */
+#background-video {
+	/* Position and size */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Ensure video is in front of the header background but behind other content */
+	z-index: 2;
+	/* Hide the video if it doesn't load */
+	display: block;
+}
