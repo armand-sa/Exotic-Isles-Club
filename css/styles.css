@@ -4,40 +4,40 @@
 
 /* Root Styles*/
 :root {
-	/* Fonts */
-	--heading-font: "Playfair Display", serif;
-	--body-font: "Montserrat", sans-serif;
-	/* Colors */
-	--body-color: #DEEDEE;
-	--text-dark: #001516;
-	--text-light: #F9FCFC;
-	--dark-teal: #053D42;
-	--light-teal: #315E62;
-	--light-mint: #A6DDDD;
-	--white: #FFF;
-	--black: #000;
+  /* Fonts */
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Montserrat", sans-serif;
+  /* Colors */
+  --body-color: #deedee;
+  --text-dark: #001516;
+  --text-light: #f9fcfc;
+  --dark-teal: #053d42;
+  --light-teal: #315e62;
+  --light-mint: #a6dddd;
+  --white: #fff;
+  --black: #000;
 }
 
 /* HTML & Body Styles */
 html {
-	background-color: var(--body-color);
-	scroll-behavior: smooth;
-	/* Set this to the height of your fixed header */
-	/* scroll-padding-top: ; */
+  background-color: var(--body-color);
+  scroll-behavior: smooth;
+  /* Set this to the height of your fixed header */
+  /* scroll-padding-top: ; */
 }
 
 body {
-	/* Typographic Styles */
-	font-family: var(--body-font);
-	font-optical-sizing: auto;
-  font-weight: 400;  /* Regular */
+  /* Typographic Styles */
+  font-family: var(--body-font);
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular */
   font-style: normal;
-	font-size: 16px;
-	line-height: 1.3;
-	/* Typographic Color */
-	color: var(--text-dark);
-	/* Fix horizontal overflow */
-	overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.4;
+  /* Typographic Color */
+  color: var(--text-dark);
+  /* Fix horizontal overflow */
+  overflow-x: hidden;
 }
 
 /* Heading Styles */
@@ -45,14 +45,14 @@ h1,
 h2,
 h3,
 h4 {
-	/* Typographic Styles */
-	font-family: var(--heading-font);
-	font-optical-sizing: auto;
+  /* Typographic Styles */
+  font-family: var(--heading-font);
+  font-optical-sizing: auto;
   font-weight: 400; /* Regular */
   font-style: normal;
-	line-height: 1.1;
-	/* Typographic Color */
-	color: var(--dark-teal);
+  line-height: 1.1;
+  /* Typographic Color */
+  color: var(--dark-teal);
 }
 
 h1 {
@@ -76,22 +76,23 @@ h4 {
 }
 
 p {
-	/* 16 Pixels */
-  font-size: 1rem;
+  /* 18 Pixels */
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
-/* Biggest Tablet Portrait Sizes */
-@media only screen and (max-width: 1024px) {
+/* Large screens */
+@media only screen and (max-width: 1200px) {
   h1 {
     font-size: 4rem; /* 64px */
   }
 
   h2 {
-    font-size: 3rem; /* 48px */
+    font-size: 3.25rem; /* 52px */
   }
 
   h3 {
-    font-size: 2.5rem; /* 40px */
+    font-size: 2.625rem; /* 42px */
   }
 
   h4 {
@@ -99,12 +100,35 @@ p {
   }
 
   p {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Notebooks/Laptops */
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3.5rem; /* 56px */
+  }
+
+  h2 {
+    font-size: 3rem; /* 48px */
+  }
+
+  h3 {
+    font-size: 2.375rem; /* 38px */
+  }
+
+  h4 {
+    font-size: 1.875rem; /* 30px */
+  }
+
+  p {
     font-size: 1rem; /* 16px */
   }
 }
 
-/* Biggest Mobile Portrait Sizes */
-@media only screen and (max-width: 480px) {
+/* Tablets */
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 3rem; /* 48px */
   }
@@ -114,7 +138,7 @@ p {
   }
 
   h3 {
-    font-size: 2rem; /* 32px */
+    font-size: 2.125rem; /* 34px */
   }
 
   h4 {
@@ -122,7 +146,32 @@ p {
   }
 
   p {
-    font-size: 1rem; /* 16px */
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.5;
+  }
+}
+
+/* Smaller Smart Phones */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+
+  h3 {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  h4 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  p {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
   }
 }
 
@@ -137,63 +186,73 @@ p {
 
 /* Fallback image if video doesn't play */
 #hero {
-	/* Header to stick at the top as you scroll */
-	position: sticky;
-	top: 0;
-	z-index: 1;
-	background-image: url(../assets/videos/island-video-fallback.webp);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
-	width: 100%;
+  /* Header to stick at the top as you scroll */
+  position: relative;
+  top: 0;
+  z-index: 1;
+  background-image: url(../assets/videos/island-video-fallback.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Video over image */
 #hero .background-video {
-	position: absolute;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 /* Navbar */
 nav {
-	position: fixed;
-	z-index: 999;
-	height: 4.375rem; /* 70px */
-	top: 1.875rem; /* 30px */
-	width: 100%;
-	max-width: 90rem; /* 1440px */
-	border-radius: 50px; /* 50px */
-	border: 1px solid var(--white);
-	background-color: var(--light-teal);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* 
+  position: fixed;
+  z-index: 999;
+  height: 4.375rem; /* 70px */
+  top: 1.875rem; /* 30px */
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  border-radius: 50px; /* 50px */
+  border: 1px solid var(--white);
+  background-color: var(--light-teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 
 	Center the nav horizontally in the viewport
 	when using position: fixed; (which positions 
 	the element relative to the viewport).
 	*/
-	left: 50%;
+  left: 50%;
   transform: perspective(500px) translateX(-50%);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 /* --------------------------------------------- */
-/* Main & Footer Content - Scroll Over Hero */
+/* Main Content */
 /* --------------------------------------------- */
-.scroll-over-content {
-	position: relative;
-	z-index: 5;
-	width: 100%;
-	/* Remove the fixed height to allow scrolling */
-	height: auto;
-	min-height: 100vh; /* Ensure it still takes up full height if content is minimal */
-	background-color: var(--body-color);
+
+main {
+  width: 100%;
+  height: auto;
+  /* Ensure it still takes up full height if content is minimal */
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+
+/* --------------------------------------------- */
+/* Footer Content */
+/* --------------------------------------------- */
+footer {
+  background-color: var(--light-teal);
+  height: auto;
+  /* Ensure it still takes up full height if content is minimal */
+  min-height: 100vh;
 }
