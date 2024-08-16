@@ -196,6 +196,7 @@ p {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  display: flex;
 }
 
 /* Video over image */
@@ -214,7 +215,7 @@ nav {
   position: fixed;
   z-index: 999;
   height: 5.625rem; /* 90px */
-  top: 1.875rem; /* 30px */
+  top: 3.75rem; /* 600px */
   width: 100%;
   max-width: 120rem; /* 1920px */
   border-radius: 50px; /* 50px */
@@ -233,14 +234,17 @@ nav {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Left areas of the nav  */
+/* Left areas of the nav */
+.nav-left {
+  margin-left: 2%;
+}
+
 .nav-left > a {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	text-decoration: none;
 	width: 100%;
-	margin-left: 9%;
 	
 }
 
@@ -269,6 +273,44 @@ nav {
 	color: var(--light-mint);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+/* Right areas of the nav */
+.nav-right {
+  margin-right: 2%;
+}
+
+.nav-right > a {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	width: 100%;
+}
+
+a .menu-state-container {
+  margin-right: 1.25rem;
+}
+
+a .menu-state-container p {
+  font-weight: 400; 
+  font-size: 1.75rem;
+  text-align: right;
+  color: var(--text-light);
+  text-transform: uppercase;
+  width: 100%;
+}
+
+a .menu-state-container > .nav-closed {
+  display: none;
+}
+
+a .menu-icon-container > .nav-close-icon {
+  display: none;
+}
+
+
+
+
 
 
 /* --------------------------------------------- */
