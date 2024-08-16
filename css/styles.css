@@ -292,7 +292,6 @@ a .menu-state-container {
 }
 
 a .menu-state-container p {
-  font-weight: 400; 
   font-size: 1.75rem;
   text-align: right;
   color: var(--text-light);
