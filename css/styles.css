@@ -213,7 +213,7 @@ p {
 nav {
   position: fixed;
   z-index: 999;
-  height: 4.375rem; /* 70px */
+  height: 5.625rem; /* 90px */
   top: 1.875rem; /* 30px */
   width: 100%;
   max-width: 120rem; /* 1920px */
@@ -231,6 +231,43 @@ nav {
   left: 50%;
   transform: perspective(500px) translateX(-50%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Left areas of the nav  */
+.nav-left > a {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	width: 100%;
+	margin-left: 9%;
+	
+}
+
+.nav-left > a img {
+	height: 2.5rem;
+	width: auto;
+	transition: all 0.5s ease;
+}
+
+.nav-left > a:hover img {
+	/* Move the image when <a> is hovered */
+  transform: translateX(10px); 
+}
+
+.nav-left > a .p-styled-heading {
+	font-family: var(--heading-font);
+	font-size: 3.125rem; /* 50px */
+	color: var(--text-light);
+	line-height: 1;
+	margin-bottom: .3125rem;
+	margin-left: 1.25rem;
+	transition: all 0.3s ease;
+}
+
+.nav-left > a .p-styled-heading:hover {
+	color: var(--light-mint);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 
