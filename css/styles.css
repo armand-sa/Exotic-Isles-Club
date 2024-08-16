@@ -122,7 +122,7 @@ p {
   }
 
   p {
-    font-size: 0.875rem; /* 14px */
+    font-size: 1rem; /* 16px */
   }
 }
 
@@ -140,7 +140,7 @@ p {
 	/* Header to stick at the top as you scroll */
 	position: sticky;
 	top: 0;
-	z-index: auto;
+	z-index: 1;
 	background-image: url(../assets/videos/island-video-fallback.webp);
 	background-position: center;
 	background-size: cover;
@@ -161,11 +161,10 @@ p {
 }
 
 /* Navbar */
-
 nav {
 	position: fixed;
 	z-index: 999;
-	height: 5.625rem; /* 90px */
+	height: 4.375rem; /* 70px */
 	top: 1.875rem; /* 30px */
 	width: 100%;
 	max-width: 90rem; /* 1440px */
@@ -181,7 +180,7 @@ nav {
 	the element relative to the viewport).
 	*/
 	left: 50%;
-  transform: translateX(-50%);
+  transform: perspective(500px) translateX(-50%);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
@@ -191,7 +190,7 @@ nav {
 /* --------------------------------------------- */
 .scroll-over-content {
 	position: relative;
-	z-index: 4;
+	z-index: 5;
 	width: 100%;
 	/* Remove the fixed height to allow scrolling */
 	height: auto;
