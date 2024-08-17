@@ -61,25 +61,42 @@
 
       <!-- Fixed Navbar -->
       <nav aria-label="Main Navigation">
+
+        <!-- Left side of the navbar -->
         <div class="nav-left">
           <a href="#hero" aria-label="Return to the top of the homepage">
             <img src="./assets/icons/nav-logo.webp" alt="Exotic Isles Club logo">
             <p class="p-styled-heading">Exotic Isles Club</p>
           </a>
         </div>
+
+        <!-- Right side of the navbar -->
         <div class="nav-right">
-          
-          <button aria-label="Open or close the dropdown menu">
-            <div class="menu-state-container">
-              <p class="nav-open">Open Menu</p>
-              <p class="nav-closed">Close Menu</p>
+          <!-- A checkbox to open and close the dropdown menu -->
+          <input type="checkbox" id="dropdown-toggle" class="dropdown-checkbox">
+          <label for="dropdown-toggle" class="dropbtn" aria-label="Click to open or close the dropdown menu">
+            <div class="menu-text-container">
+              <p class="nav-open">Menu</p>
             </div>
-            <div class="menu-icon-container">
-              <img class="nav-open-icon" src="./assets/icons/menu-open.webp" alt="Open the dropdown menu">
-              <img class="nav-close-icon" src="./assets/icons/menu-close.webp" alt="Close the dropdown menu">
+            <div>
+              <img src="./assets/icons/menu-open.webp" alt="Open the dropdown menu">
             </div>
-          </button>
+          </label>
+
+          <!-- Dropdown Menu container -->
+          <div class="dropdown">
+            <div class="dropdown-content">
+              <a href="#hero">Home</a>
+              <a href="#hero">About Us</a>
+              <a href="#">Upcoming Adventure</a>
+              <a href="#">Memorable Island Escapes</a>
+              <a href="#">Membership Benefits</a>
+              <a href="#">Join Us</a>
+              <a href="#contact">Contact Us</a>
+            </div>
+          </div>
         </div>
+
       </nav>
 
       <!-- Video -->
@@ -88,6 +105,13 @@
         <!-- MP4 Video Source -->
         <source src="./assets/videos/island-video.mp4" type="video/mp4">
       </video>
+
+      <!-- The Hero section "Welcome Card" -->
+      <div class="hero-welcome-card">
+        <h1>Welcome to the Exotic Isles Club</h1>
+        <div class="hero-divider-line"></div>
+        <p>Join the Exotic Isles Club and discover luxury in tropical paradise. Every quarter, our members explore a new, stunning island, enjoying personalized itineraries and unforgettable experiences.</p>
+      </div>
 
   </header>
   
@@ -103,7 +127,7 @@
   <!-- --------------------------------------------- -->
   <!-- Footer Content -->
   <!-- --------------------------------------------- -->
-  <footer>
+  <footer id="contact">
 
   </footer>
 
