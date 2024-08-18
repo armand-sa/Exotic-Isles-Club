@@ -50,7 +50,7 @@ h4 {
   font-style: normal;
   line-height: 1.1;
   /* Typographic Color */
-  color: var(--dark-teal);
+  color: var(--text-dark);
 }
 
 h1 {
@@ -82,6 +82,8 @@ p {
 a {
   /* 18 Pixels */
   font-size: 1.125rem;
+  /* Typographic Color */
+  color: var(--text-dark);
 }
 
 /* Large screens */
@@ -194,7 +196,52 @@ a {
   }
 }
 
+/* --------------------------------------------- */
+/* Responsiveness */
+/* Large screens */
+/* @media only screen and (max-width: 1200px) {
+} */
+
+/* Notebooks/Laptops */
+/* @media only screen and (max-width: 1024px) {
+} */
+
+/* Tablets */
+/* @media only screen and (max-width: 768px) {
+} */
+
+/* Smaller Smart Phones */
+/* @media only screen and (min-width: 320px) and (max-width: 480px) {
+} */
+
 /* Buttons */
+
+.primary-button {
+  font-size: 1.125rem; /* 18px */
+  background-color: var(--dark-teal);
+  color: var(--text-light);
+  border-radius: 1.5rem; /* 24px*/
+  border: 1px solid var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  /* Vertical 12.5px, Horizontal 20px */
+  padding: .7813rem 1.25rem; 
+  width: auto; /* Ensures it resizes according to content */
+  display: inline-block; /* Ensure it takes the right size based on padding */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: var(--light-teal);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.primary-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(.125rem);
+}
 
 /* Links */
 
@@ -215,7 +262,6 @@ a {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  display: flex;
 }
 
 /* Video over image */
@@ -235,27 +281,29 @@ nav {
   z-index: 999;
   height: 5.625rem; /* 90px */
   top: 3.75rem; /* 600px */
-  width: 100%;
-  max-width: 120rem; /* 1920px */
-  border-radius: 50px; /* 50px */
-  border: 1px solid var(--white);
-  background-color: var(--light-teal);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   /* 
 	Center the nav horizontally in the viewport
 	when using position: fixed; (which positions 
 	the element relative to the viewport).
 	*/
   left: 50%;
-  transform: perspective(500px) translateX(-50%);
+  transform: translateX(-50%);
+  width: 93.5%;
+  border-radius: 50px; /* 50px */
+  border: 1px solid var(--white);
+  background-color: var(--light-teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Left areas of the nav */
 .nav-left {
-  margin-left: 2%;
+  padding-left: 2.3125rem;
+}
+
+.nav-right {
+  padding-right: 2.3125rem;
 }
 
 .nav-left > a {
@@ -264,7 +312,6 @@ nav {
 	cursor: pointer;
 	text-decoration: none;
 	width: 100%;
-	
 }
 
 .nav-left > a img {
@@ -291,11 +338,6 @@ nav {
 .nav-left > a .p-styled-heading:hover {
 	color: var(--light-mint);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Right areas of the nav */
-.nav-right {
-  margin-right: 2%;
 }
 
 .nav-right > .dropbtn {
@@ -363,7 +405,6 @@ nav {
 .dropdown-content a {
   width: 100%;
   text-decoration: none;
-  font-weight: 400;
   text-align: right;
   color: var(--text-light);
   padding: .625rem 3.125rem;
@@ -388,9 +429,12 @@ nav {
 .hero-welcome-card {
   position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
-  top: 30%;
+  top: 34%;
   max-width: 41.0625rem; /* 657px */
   height: fit-content;
   text-align: center;
@@ -402,10 +446,47 @@ nav {
 }
 
 .hero-divider-line {
-  height: 1px;
+  height: .0625rem;
   background-color: var(--white);
+  width: 100%;
   margin: 1.875rem 0;
 }
+
+.hero-button-container {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: fit-content;
+  margin-top: 1.875rem;
+}
+
+.hero-p {
+  font-weight: 500;
+}
+
+.hero-button-container img {
+  width: 3rem;
+  height: auto;
+  margin: 0 1.875rem;
+}
+
+/* --------------------------------------------- */
+/* Responsiveness */
+/* Large screens */
+/* @media only screen and (max-width: 1200px) {
+} */
+
+/* Notebooks/Laptops */
+/* @media only screen and (max-width: 1024px) {
+} */
+
+/* Tablets */
+/* @media only screen and (max-width: 768px) {
+} */
+
+/* Smaller Smart Phones */
+/* @media only screen and (min-width: 320px) and (max-width: 480px) {
+} */
 
 
 /* --------------------------------------------- */
