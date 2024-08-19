@@ -230,11 +230,6 @@ a {
   .secondary-button {
     font-size: 0.8125rem; /* 13px */
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.875rem; /* 30px */
-  }
 }
 
 /* Smaller Smart Phones */
@@ -257,18 +252,12 @@ a {
   .primary-button {
     font-size: 0.75rem; /* 12px */
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.875rem; /* 30px */
-  }
 }
 
 /* --------------------------------------------- */
 /* Responsiveness */
-
 /* Large screens */
-/* @media only screen and (max-width: 1440) {
+/* @media only screen and (max-width: 1440px) {
 } */
 
 /* Large screens */
@@ -302,7 +291,7 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
@@ -312,8 +301,8 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -400,6 +389,8 @@ nav {
 
 .nav-right > .dropbtn img {
   margin-top: 5px;
+  width: 1.75rem;
+  height: auto;
 }
 
 .dropbtn .menu-text-container {
@@ -525,17 +516,32 @@ nav {
 /* --------------------------------------------- */
 /* Responsiveness */
 
+/* --------------------------------------------- */
+/* Responsiveness */
+/* Large screens */
+@media only screen and (max-width: 1440px) {
+
+}
+
+/* Large screens */
+@media only screen and (max-width: 1200px) {
+
+}
+
 /* Notebooks/Laptops */
 @media only screen and (max-width: 1024px) {
+
 }
 
 /* Tablets */
 @media only screen and (max-width: 768px) {
+
 }
 
 /* Smaller Smart Phones */
-/* @media only screen and (min-width: 320px) and (max-width: 480px) {
-} */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+}
 
 
 /* --------------------------------------------- */
@@ -545,6 +551,8 @@ nav {
 /* --------------------------------------------- */
 /* Upcoming Adventure Section */
 #upcoming {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   width: 100%;
   height: auto;
   padding: 3.75rem; /* 60px */
@@ -560,12 +568,16 @@ nav {
   border: 3px solid var(--white);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .upcoming-img-container > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 1s ease;
 }
 
@@ -579,7 +591,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 1.875rem;
+  margin-left: 60px; /* 60px*/
 }
 
 .upcoming-content h2 {
@@ -590,13 +602,17 @@ nav {
 }
 
 .upcoming-content h2 img {
-  margin-left: 1.875rem;
-  margin-top: .3125rem;
+  margin-top: .625rem; /* 10px */
+
 }
 
 .upcoming-content h3 {
   color: var(--light-mint);
   margin-bottom: 30px;
+}
+
+p:first-of-type {
+  margin-bottom: .9375rem; /* 15px */
 }
 
 .upcoming-content .secondary-button {
@@ -612,6 +628,97 @@ nav {
 
 .upcoming-content .secondary-button:hover img {
   transform: translateX(.625rem);
+}
+
+/* --------------------------------------------- */
+/* Responsiveness */
+/* Large screens */
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  /* Upcoming Adventure Section */
+  #upcoming {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.875rem; /* 30px */
+  }
+
+  #upcoming > .upcoming-img-container {
+    grid-column: span 3;
+  }
+
+  .upcoming-content {
+    grid-column: span 3;
+    align-items: center;
+    text-align: center;
+    margin-left: 0; 
+    margin-top: 1.875rem; /* 30px */
+  }
+
+  .upcoming-content h2 {
+    color: var(--text-light);
+    margin-bottom: .625rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .upcoming-content h2 img {
+    margin-top: .3125rem; /* 5px */
+    margin-left: .625rem; /* 10px */
+    height: 2rem; /* 32px */
+    width: auto;
+  }
+}
+
+/* Smaller Smart Phones */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Upcoming Adventure Section */
+  #upcoming {
+    grid-template-columns: repeat(3, 1fr);
+    padding: .9375rem; /* 15px */
+  }
+
+  #upcoming > .upcoming-img-container {
+    grid-column: span 3;
+  }
+
+  .upcoming-content {
+    margin-top: 0.9375rem; /* 15px */
+  }
+
+  .upcoming-content h2 {
+    margin-bottom: 0;
+  }
+
+  .upcoming-content h2 img {
+    margin-top: .1563rem; /* 2.5px */
+    margin-left: .3125rem; /* 5px */
+    height: 1.5rem; /* 24px */
+    width: auto;
+  }
+
+  .upcoming-content h3 {
+    color: var(--light-mint);
+    margin-bottom: .9375rem; /* 15px */
+  }
+
+  p:first-of-type {
+    margin-bottom: .3125rem; /* 5px */
+  }
+
+  .upcoming-content .secondary-button {
+    margin-top: .9375rem; /* 15px */
+    display: flex;
+    align-items: center;
+  }
+
+  .upcoming-content .secondary-button img {
+    margin-left: .625rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .upcoming-content .secondary-button:hover img {
+    transform: translateX(.625rem);
+  }
 }
 
 
