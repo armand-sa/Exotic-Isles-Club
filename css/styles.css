@@ -30,7 +30,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400; /* Regular */
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   /* Typographic Color */
   color: var(--text-dark);
@@ -55,33 +55,33 @@ h4 {
 
 h1 {
   /* 72 Pixels */
-  font-size: 4.5rem;
+  font-size: 72px;
 }
 
 h2 {
   /* 58 Pixels */
-  font-size: 3.625rem;
+  font-size: 58px;
 }
 
 h3 {
   /* 46 Pixels */
-  font-size: 2.875rem;
+  font-size: 46px;
 }
 
 h4 {
   /* 36 Pixels */
-  font-size: 2.255rem;
+  font-size: 36.08px;
 }
 
 p {
   /* 18 Pixels */
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.3;
 }
 
 a {
   /* 18 Pixels */
-  font-size: 1.125rem;
+  font-size: 18px;
   /* Typographic Color */
   color: var(--text-dark);
   line-height: 1.3;
@@ -90,14 +90,14 @@ a {
 /* Buttons */
 .primary-button,
 .secondary-button {
-  font-size: 1.125rem; /* 18px */
+  font-size: 18px; /* 1.125rem */
   background-color: var(--dark-teal);
   color: var(--text-light);
-  border-radius: 1.5rem; /* 24px*/
-  border: 1px solid var(--white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  /* Vertical 12.5px, Horizontal 20px */
-  padding: .625rem 1.875rem; /* 10px, 30px*/
+  border-radius: 24px; /* 1.5rem*/
+  border: .0625rem solid var(--white);
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.25);
+  /* Vertical .7813rem, Horizontal 1.25rem */
+  padding: 10px 30px; /* .625rem, 1.875rem*/
   width: auto; /* Ensures it resizes according to content */
   display: inline-block; /* Ensure it takes the right size based on padding */
   text-align: center;
@@ -112,7 +112,7 @@ a {
 .primary-button:hover,
 .secondary-button:hover {
   background-color: var(--light-teal);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
@@ -122,135 +122,135 @@ a {
 
 .primary-button:active,
 .secondary-button:active {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  transform: translateY(.125rem);
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.875rem; /* 30px */
+  gap: 30px; /* 1.875rem */
 }
 
 /* Larger screens */
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 90rem) {
   h1 {
-    font-size: 4rem; /* 64px */
+    font-size: 64px; /* 4rem */
   }
   h2 {
-    font-size: 3.25rem; /* 52px */
+    font-size: 52px; /* 3.25rem */
   }
   h3 {
-    font-size: 2.5rem; /* 40px */
+    font-size: 40px; /* 2.5rem */
   }
   h4 {
-    font-size: 2rem; /* 32px */
+    font-size: 32px; /* 2rem */
   }
   p, a {
-    font-size: 1rem; /* 16px */
+    font-size: 16px; /* 1rem */
   }
   .primary-button {
-    font-size: 1rem; /* 16px */
+    font-size: 16px; /* 1rem */
   }
   .secondary-button {
-    font-size: 1rem; /* 16px */
+    font-size: 16px; /* 1rem */
   }
 }
 
 /* Large screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 75rem) {
   h1 {
-    font-size: 3.5rem; /* 56px */
+    font-size: 56px; /* 3.5rem */
   }
   h2 {
-    font-size: 3rem; /* 48px */
+    font-size: 48px; /* 3rem */
   }
   h3 {
-    font-size: 2.25rem; /* 36px */
+    font-size: 36px; /* 2.25rem */
   }
   h4 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 28px; /* 1.75rem */
   }
   p, a {
-    font-size: 0.9375rem; /* 15px */
+    font-size: 15px; /* .9375rem */
   }
   .primary-button {
-    font-size: 0.9375rem; /* 15px */
+    font-size: 15px; /* .9375rem */
   }
   .secondary-button {
-    font-size: 0.9375rem; /* 15px */
+    font-size: 15px; /* .9375rem */
   }
 }
 
 /* Notebooks/Laptops */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 64rem) {
   h1 {
-    font-size: 3rem; /* 48px */
+    font-size: 48px; /* 3rem */
   }
   h2 {
-    font-size: 2.5rem; /* 40px */
+    font-size: 40px; /* 2.5rem */
   }
   h3 {
-    font-size: 2rem; /* 32px */
+    font-size: 32px; /* 2rem */
   }
   h4 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 24px; /* 1.5rem */
   }
   p, a {
-    font-size: 0.875rem; /* 14px */
+    font-size: 14px; /* .875rem */
   }
   .primary-button {
-    font-size: 0.875rem; /* 14px */
+    font-size: 14px; /* .875rem */
   }
   .secondary-button {
-    font-size: 0.875rem; /* 14px */
+    font-size: 14px; /* .875rem */
   }
 }
 
 /* Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48rem) {
   h1 {
-    font-size: 2.5rem; /* 40px */
+    font-size: 40px; /* 2.5rem */
   }
   h2 {
-    font-size: 2rem; /* 32px */
+    font-size: 32px; /* 2rem */
   }
   h3 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 28px; /* 1.75rem */
   }
   h4 {
-    font-size: 1.25rem; /* 20px */
+    font-size: 20px; /* 1.25rem */
   }
   p, a {
-    font-size: 0.8125rem; /* 13px */
+    font-size: 13px; /* .8125rem */
   }
   .primary-button {
-    font-size: 0.8125rem; /* 13px */
+    font-size: 13px; /* .8125rem */
   }
   .secondary-button {
-    font-size: 0.8125rem; /* 13px */
+    font-size: 13px; /* .8125rem */
   }
 }
 
 /* Smaller Smart Phones */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 20rem) and (max-width: 30rem) {
   h1 {
-    font-size: 2rem; /* 32px */
+    font-size: 32px; /* 2rem */
   }
   h2 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 28px; /* 1.75rem */
   }
   h3 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 24px; /* 1.5rem */
   }
   h4 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 18px; /* 1.125rem */
   }
   p, a {
-    font-size: 0.75rem; /* 12px */
+    font-size: 12px; /* .75rem */
   }
   .primary-button {
-    font-size: 0.75rem; /* 12px */
+    font-size: 12px; /* .75rem */
   }
 }
 
@@ -314,27 +314,27 @@ a {
 nav {
   position: fixed;
   z-index: 999;
-  top: 3.75rem;
-  width: calc(100% - 120px); /* Subtracting the total horizontal margin */
-  max-width: 2500px; 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 50px;
-  border: 3px solid var(--white);
+  top: 60px; /* 3.75rem */
+  width: calc(100% - 7.5rem); /* Subtracting the total horizontal margin */
+  max-width: 156.25rem; 
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+  border-radius: 3.125rem; /* 50px */
+  border: .1875rem solid var(--white);
   background-color: var(--light-teal);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin: 0 3.75rem; /* 0, 60px */
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.2);
+  margin: 0 60px; /* 0, 3.75rem */
 }
 
 .nav-left {
-  padding-left: 1.875rem;
+  padding-left: 30px; /* 1.875rem */
 }
 
 .nav-right {
-  padding-right: 1.875rem;
+  padding-right: 30px;
 }
 
 .nav-left > a {
@@ -346,31 +346,30 @@ nav {
 }
 
 .nav-left > a img {
-	height: 2.5rem;
+	height: 40px; /* 2.5rem */
 	width: auto;
 	transition: all 0.5s ease;
 }
 
 .nav-left > a:hover img {
 	/* Move the image when <a> is hovered */
-  transform: translateX(10px); 
+  transform: translateX(.625rem); 
 }
 
 .nav-left > a .p-styled-heading {
 	font-family: var(--heading-font);
-	font-size: 3.125rem; /* 50px */
+	font-size: 50px; /* 3.125rem */
 	color: var(--text-light);
 	line-height: 1;
-	margin-bottom: .3125rem;
-	margin-left: 1.25rem;
+	margin-bottom: 5px;
+	margin-left: 20px;
 	transition: all 0.3s ease;
 }
 
 .nav-left > a .p-styled-heading:hover {
 	color: var(--light-mint);
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	text-shadow: .0625rem .0625rem .125rem rgba(0, 0, 0, 0.5);
 }
-
 
 .nav-right > .dropbtn {
 	display: flex;
@@ -383,22 +382,22 @@ nav {
 }
 
 .nav-right > .dropbtn p {
-  margin: .0625rem 0; /* 1px */
+  margin: 1px 0; /* .0625rem */
 }
 
 .nav-right > .dropbtn img {
-  margin-top: 5px;
-  width: 1.75rem;
+  margin-top: .3125rem;
+  width: 28px; /* 1.75rem */
   height: auto;
 }
 
 .dropbtn .menu-text-container {
-  margin-right: 1.25rem;
+  margin-right: 20px;
 }
 
 /* For the menu text color */
 .dropbtn .menu-text-container p {
-  font-size: 1.375rem;
+  font-size: 22px; /* 1.375rem */
   text-align: right;
   color: var(--text-light); /* Default color: white */
   text-transform: uppercase;
@@ -409,7 +408,7 @@ nav {
 /* Change color on hover */
 .dropbtn:hover .menu-text-container p {
   color: var(--light-mint);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: .0625rem .0625rem .125rem rgba(0, 0, 0, 0.5);
 }
 
 /* Hide the checkbox */
@@ -432,15 +431,16 @@ nav {
 .dropdown-content {
   position: absolute;
   z-index: 1;
-  top: 4.6875rem;
+  /* Closeness of dropdown to navbar */
+  top: 75px; /* 4.6875rem */
   right: 2%;
   display: flex;
   flex-direction: column;
   align-items: end;
   background-color: var(--light-teal); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 3.125rem 3.125rem;
-  border: 3px solid var(--white);
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 3.125rem 3.125rem; /* 0 0 50px 50px */
+  border: .1875rem solid var(--white);
   overflow: hidden;
   cursor: pointer;
 }
@@ -451,17 +451,17 @@ nav {
   text-decoration: none;
   text-align: right;
   color: var(--text-light);
-  padding: .625rem 3.125rem;
+  padding: 10px 50px;
   display: block;
   transition: all 1s ease;
 }
 
 .dropdown-content a:first-of-type {
-  padding-top: 1.25rem;
+  padding-top: 20px;
 }
 
 .dropdown-content a:last-of-type {
-  padding-bottom: 1.25rem;
+  padding-bottom: 20px;
 }
 
 /* Add a dark teal background color to dropdown links on hover */
@@ -479,22 +479,22 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   top: 34%;
-  max-width: 41.3125rem; /* 661px */
+  max-width: 661px; /* 41.3125rem */
   height: fit-content;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 6.25rem;
-  border: 3px solid var(--white);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  padding: 3.75rem;
+  border-radius: 100px;
+  border: .1875rem solid var(--white);
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.5);
+  padding: 60px;
 
 }
 
 .hero-divider-line {
-  height: .0625rem;
+  height: 1px;
   background-color: var(--white);
   width: 100%;
-  margin: 1.875rem 0;
+  margin: 30px 0;
 }
 
 .hero-button-container {
@@ -502,7 +502,7 @@ nav {
   justify-content: space-between;
   height: auto;
   width: fit-content;
-  margin-top: 1.875rem;
+  margin-top: 30px;
 }
 
 .hero-p {
@@ -510,39 +510,583 @@ nav {
 }
 
 .hero-button-container img {
-  width: 3rem;
+  width: 48px;
   height: auto;
-  margin: 0 1.875rem;
+  margin: 0 30px;
 }
-
-/* --------------------------------------------- */
-/* Responsiveness */
 
 /* --------------------------------------------- */
 /* Responsiveness */
 /* Large screens */
 @media only screen and (max-width: 1440px) {
+  /* Navbar */
+  nav {
+    top: 3.75rem; /* 60px */
+    width: calc(100% - 7.5rem); /* Subtracting the total horizontal margin 120px */
+    margin: 0 3.75rem; /* 0, 60px */
+  }
 
+  .nav-left {
+    padding-left: 1.875rem; /* 30px */
+  }
+
+  .nav-right {
+    padding-right: 1.875rem; /* 30px */
+  }
+
+  .nav-left > a img {
+    height: 2.25rem; /* 36px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 2.8125rem; /* 45px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 1.5625rem; /* 25px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 4.375rem; /* 70px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 3.125rem; /* 10px, 50px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: 3.75rem; /* 60px */
+  }
+
+  .hero-divider-line {
+    margin: 1.875rem 0; /* 30px, 0 */
+  }
+
+  .hero-button-container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: fit-content;
+    margin-top: 1.875rem; /* 30px */
+  }
+
+  .hero-button-container img {
+    width: 2.7rem; /* 36px */
+    margin: 0 1.6875rem; /* 0, 27px*/
+  }
 }
 
 /* Large screens */
 @media only screen and (max-width: 1200px) {
+  /* Navbar */
+  nav {
+    top: 3.75rem; /* 60px */
+    width: calc(100% - 7.5rem); /* Subtracting the total horizontal margin 120px */
+    margin: 0 3.75rem; /* 0, 60px */
+  }
 
+  .nav-left {
+    padding-left: 1.875rem; /* 30px */
+  }
+
+  .nav-right {
+    padding-right: 1.875rem; /* 30px */
+  }
+
+  .nav-left > a img {
+    height: 2rem; /* 32px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 1.5rem; /* 24px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 4.0625rem; /* 65px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 3.125rem; /* 10px 50px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: 3.75rem; /* 60px */
+  }
+
+  .hero-divider-line {
+    margin: 1.875rem 0; /* 30px, 0 */
+  }
+
+  .hero-button-container img {
+    width: 2.4rem; /* 38.4px */
+    margin: 0 1.5rem; /* 0, 24px */
+  }
 }
 
 /* Notebooks/Laptops */
 @media only screen and (max-width: 1024px) {
+  /* Navbar */
+  nav {
+    top: 3.75rem; /* 60px */
+    width: calc(100% - 7.5rem); /* Subtracting the total horizontal margin 120px */
+    margin: 0 3.75rem; /* 0, 60px */
+  }
 
+  .nav-left {
+    padding-left: 1.875rem; /* 30px */
+  }
+
+  .nav-right {
+    padding-right: 1.875rem; /* 30px */
+  }
+
+  .nav-left > a img {
+    height: 1.875rem; /* 30px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 2.25rem; /* 36px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 1.375rem; /* 22px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 1rem; /* 16px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 3.8125rem; /* 61px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 3.125rem; /* 10px 50px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: 3.75rem; /* 60px */
+    max-width: 37.5625rem; /* 601px */
+  }
+
+  .hero-divider-line {
+    margin: 1.875rem 0; /* 30px, 0 */
+  }
+
+  .hero-button-container img {
+    width: 2.1rem; /* 33.6px */
+    margin: 0 1.3125rem; /* 0, 21px */
+  }
 }
 
 /* Tablets */
 @media only screen and (max-width: 768px) {
+  /* Navbar */
+  nav {
+    top: 1.875rem; /* 30px */
+    width: calc(100% - 3.75rem); /* Subtracting the total horizontal margin 60px */
+    margin: 0 1.875rem; /* 0, 30px */
+  }
 
+  .nav-left {
+    padding-left: 1.875rem; /* 30px */
+  }
+
+  .nav-right {
+    padding-right: 1.875rem; /* 30px */
+  }
+
+  .nav-left > a img {
+    height: 1.625rem; /* 26px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 2rem; /* 32px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 1.25rem; /* 20px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 3.5625rem; /* 57px; */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 3.125rem; /* 10px 50px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: 1.875rem; /* 30px */
+    border-radius: 3.125rem; /* 50px */
+    max-width: 28.875rem; /* 462px */
+  }
+
+  .hero-divider-line {
+    margin: .9375rem 0; /* 15px, 0 */
+  }
+
+  .hero-button-container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: fit-content;
+    margin-top: .9375rem; /* 15px */
+  }
+
+  .hero-button-container img {
+    width: 1.8rem; /* 28.8px */
+    margin: 0 1.125rem; /* 0, 18px */
+  }
 }
 
-/* Smaller Smart Phones */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+/* Smaller Smart Phones: 401px - 480px */
+@media only screen and (min-width: 401px) and (max-width: 480px) {
+  /* Navbar */
+  nav {
+    top: .9375rem; /* 15px */
+    width: calc(100% - 1.875rem); /* Subtracting the total horizontal margin 30px */
+    margin: 0 .9375rem; /* 0, 15px */
+  }
 
+  .nav-left {
+    padding-left: 1.25rem; /* 20px */
+  }
+
+  .nav-right {
+    padding-right: 1.25rem; /* 20px */
+  }
+
+  .nav-left > a img {
+    height: 1.375rem; /* 22px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 1.625rem; /* 26px */
+    margin-left: .625rem; /* 10px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 1.75rem; /* 28px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+    margin-right: .625rem; /* 10px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 0.8125rem; /* 13px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 3.1875rem; /* 51px; */
+    right: 4%;
+    border-radius: 0 0 1.5625rem 1.5625rem; /* 0 0 25px 25px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 1.875rem; /* 10px 30px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: .9375rem; /* 15px */
+    border-radius: 3.125rem; /* 50px */
+    max-width: 22.0625rem; /* 353px */
+  }
+
+  .hero-divider-line {
+    margin: .9375rem 0; /* 15px, 0 */
+  }
+
+  .hero-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: fit-content;
+    margin-top: .9375rem; /* 15px */
+  }
+
+  .hero-button-container img {
+    width: 2rem; /* 32px */
+    margin: .9375rem .8438rem; /* 15px, 13.5px */
+  }
+}
+
+/* Smaller Smart Phones: 361px - 400px */
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+  /* Navbar */
+  nav {
+    top: .9375rem; /* 15px */
+    width: calc(100% - 1.875rem); /* Subtracting the total horizontal margin 30px */
+    margin: 0 .9375rem; /* 0, 15px */
+  }
+
+  .nav-left {
+    padding-left: 1.25rem; /* 20px */
+  }
+
+  .nav-right {
+    padding-right: 1.25rem; /* 20px */
+  }
+
+  .nav-left > a img {
+    height: 1.25rem; /* 20px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 1.5rem; /* 24px */
+    margin-left: .625rem; /* 10px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 0.9375rem; /* 15px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+    margin-right: .625rem; /* 10px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 3.0625rem; /* 49px */
+    right: 4%;
+    border-radius: 0 0 1.5625rem 1.5625rem; /* 0 0 25px 25px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 1.875rem; /* 10px 30px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: .9375rem; /* 15px */
+    border-radius: 3.125rem; /* 50px */
+    max-width: 22.0625rem; /* 353px */
+  }
+
+  .hero-divider-line {
+    margin: .9375rem 0; /* 15px, 0 */
+  }
+
+  .hero-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: fit-content;
+    margin-top: .9375rem; /* 15px */
+  }
+
+  .hero-button-container img {
+    width: 2rem; /* 32px */
+    margin: .9375rem .8438rem; /* 15px, 13.5px */
+  }
+}
+
+/* Smaller Smart Phones: 320px - 360px */
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+  /* Navbar */
+  nav {
+    top: .9375rem; /* 15px */
+    width: calc(100% - 1.875rem); /* Subtracting the total horizontal margin 30px */
+    margin: 0 .9375rem; /* 0, 15px */
+  }
+
+  .nav-left {
+    padding-left: 1.25rem; /* 20px */
+  }
+
+  .nav-right {
+    padding-right: 1.25rem; /* 20px */
+  }
+
+  .nav-left > a img {
+    height: 1.0625rem; /* 17px */
+    margin-top: -0.125rem; /* -2px */
+  }
+
+  .nav-left > a .p-styled-heading {
+    font-size: 1.25rem; /* 20px */
+    margin-left: .3125rem; /* 5px */
+  }
+
+  .nav-right > .dropbtn img {
+    width: 0.875rem; /* 14px */
+  }
+
+  .dropbtn .menu-text-container {
+    margin-right: 1.25rem; /* 20px */
+    margin-right: .3125rem; /* 5px */
+  }
+
+  /* For the menu text color */
+  .dropbtn .menu-text-container p {
+    font-size: 0.6875rem; /* 11px */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    /* Closeness of dropdown to navbar */
+    top: 2.8125rem; /* 45px */
+    right: 4%;
+    border-radius: 0 0 1.5625rem 1.5625rem; /* 0 0 25px 25px */
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: .625rem 1.875rem; /* 10px 30px */
+  }
+
+  .dropdown-content a:first-of-type {
+    padding-top: 1.25rem; /* 20px */
+  }
+
+  .dropdown-content a:last-of-type {
+    padding-bottom: 1.25rem; /* 20px */
+  }
+
+  /* The Hero section "Welcome Card" */
+  .hero-welcome-card {
+    padding: .9375rem; /* 15px */
+    border-radius: 3.125rem; /* 50px */
+    max-width: 22.0625rem; /* 353px */
+  }
+
+  .hero-divider-line {
+    margin: .9375rem 0; /* 15px, 0 */
+  }
+
+  .hero-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: fit-content;
+    margin-top: .9375rem; /* 15px */
+  }
+
+  .hero-button-container img {
+    width: 2rem; /* 32px */
+    margin: .9375rem .8438rem; /* 15px, 13.5px */
+  }
 }
 
 
@@ -557,7 +1101,7 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   height: auto;
-  padding: 3.75rem; /* 60px */
+  padding: 60px; /* 3.75rem */
   background-color: var(--dark-teal);
   color: var(--text-light);
 }
@@ -565,10 +1109,10 @@ nav {
 #upcoming > .upcoming-img-container {
   grid-column: span 6;
   width: 100%;
-  height: 22.75rem;
-  border-radius: 6.25rem;
-  border: 3px solid var(--white);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  height: 364px;
+  border-radius: 100px;
+  border: .1875rem solid var(--white);
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.5);
   overflow: hidden;
   position: relative;
   top: 50%;
@@ -593,43 +1137,43 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 60px; /* 60px*/
+  margin-left: 3.75rem; /* 3.75rem*/
 }
 
 .upcoming-content h2 {
   color: var(--text-light);
-  margin-bottom: .625rem;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
 .upcoming-content h2 img {
-  margin-top: .625rem; /* 10px */
+  margin-top: 10px; /* .625rem */
 
 }
 
 .upcoming-content h3 {
   color: var(--light-mint);
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 p:first-of-type {
-  margin-bottom: .9375rem; /* 15px */
+  margin-bottom: 15px; /* .9375rem */
 }
 
 .upcoming-content .secondary-button {
-  margin-top: 1.875rem;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
 .upcoming-content .secondary-button img {
-  margin-left: .625rem;
+  margin-left: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
 .upcoming-content .secondary-button:hover img {
-  transform: translateX(.625rem);
+  transform: translateX(10px);
 }
 
 /* --------------------------------------------- */
@@ -641,7 +1185,7 @@ p:first-of-type {
   /* Upcoming Adventure Section */
   #upcoming {
     grid-template-columns: repeat(3, 1fr);
-    padding: 1.875rem; /* 30px */
+    padding: 30px; /* 1.875rem */
   }
 
   #upcoming > .upcoming-img-container {
@@ -653,20 +1197,20 @@ p:first-of-type {
     align-items: center;
     text-align: center;
     margin-left: 0; 
-    margin-top: 1.875rem; /* 30px */
+    margin-top: 30px; /* 1.875rem */
   }
 
   .upcoming-content h2 {
     color: var(--text-light);
-    margin-bottom: .625rem;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
   }
 
   .upcoming-content h2 img {
-    margin-top: .3125rem; /* 5px */
-    margin-left: .625rem; /* 10px */
-    height: 2rem; /* 32px */
+    margin-top: 5px; /* .3125rem */
+    margin-left: 10px; /* .625rem */
+    height: 32px; /* 2rem */
     width: auto;
   }
 }
@@ -676,7 +1220,7 @@ p:first-of-type {
   /* Upcoming Adventure Section */
   #upcoming {
     grid-template-columns: repeat(3, 1fr);
-    padding: .9375rem; /* 15px */
+    padding: 15px; /* .9375rem */
   }
 
   #upcoming > .upcoming-img-container {
@@ -684,7 +1228,7 @@ p:first-of-type {
   }
 
   .upcoming-content {
-    margin-top: 0.9375rem; /* 15px */
+    margin-top: 15px; /* .9375rem */
   }
 
   .upcoming-content h2 {
@@ -692,34 +1236,34 @@ p:first-of-type {
   }
 
   .upcoming-content h2 img {
-    margin-top: .1563rem; /* 2.5px */
-    margin-left: .3125rem; /* 5px */
-    height: 1.5rem; /* 24px */
+    margin-top: 2.5008px; /* .1563rem */
+    margin-left: 5px; /* .3125rem */
+    height: 24px; /* 1.5rem */
     width: auto;
   }
 
   .upcoming-content h3 {
     color: var(--light-mint);
-    margin-bottom: .9375rem; /* 15px */
+    margin-bottom: 15px; /* .9375rem */
   }
 
   p:first-of-type {
-    margin-bottom: .3125rem; /* 5px */
+    margin-bottom: 5px; /* .3125rem */
   }
 
   .upcoming-content .secondary-button {
-    margin-top: .9375rem; /* 15px */
+    margin-top: 15px; /* .9375rem */
     display: flex;
     align-items: center;
   }
 
   .upcoming-content .secondary-button img {
-    margin-left: .625rem;
+    margin-left: 10px;
     transition: transform 0.3s ease-in-out;
   }
 
   .upcoming-content .secondary-button:hover img {
-    transform: translateX(.625rem);
+    transform: translateX(10px);
   }
 }
 
