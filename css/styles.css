@@ -35,7 +35,7 @@ body {
   /* Typographic Color */
   color: var(--text-dark);
   /* Fix horizontal overflow */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Heading Styles */
@@ -301,8 +301,8 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  width: 100dvw;
   height: 100dvh;
+  width: 100%;
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -314,25 +314,19 @@ a {
 nav {
   position: fixed;
   z-index: 999;
-  height: auto; /* 90px */
-  top: 3.75rem; /* 600px */
-  /* 
-	Center the nav horizontally in the viewport
-	when using position: fixed; (which positions 
-	the element relative to the viewport).
-	*/
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
+  top: 3.75rem;
+  width: calc(100% - 120px); /* Subtracting the total horizontal margin */
+  max-width: 2500px; 
   padding-top: 10px;
-  padding-bottom:10px;
-  border-radius: 50px; /* 50px */
+  padding-bottom: 10px;
+  border-radius: 50px;
   border: 3px solid var(--white);
   background-color: var(--light-teal);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 3.75rem; /* 0, 60px */
 }
 
 .nav-left {
@@ -377,6 +371,7 @@ nav {
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+
 .nav-right > .dropbtn {
 	display: flex;
 	align-items: center;
@@ -385,6 +380,10 @@ nav {
 	width: 100%;
   background-color: transparent;
   border: 0;
+}
+
+.nav-right > .dropbtn p {
+  margin: .0625rem 0; /* 1px */
 }
 
 .nav-right > .dropbtn img {
@@ -397,18 +396,20 @@ nav {
   margin-right: 1.25rem;
 }
 
+/* For the menu text color */
 .dropbtn .menu-text-container p {
   font-size: 1.375rem;
   text-align: right;
-  color: var(--text-light);
+  color: var(--text-light); /* Default color: white */
   text-transform: uppercase;
   width: 100%;
   transition: all 0.3s ease;
 }
 
+/* Change color on hover */
 .dropbtn:hover .menu-text-container p {
   color: var(--light-mint);
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Hide the checkbox */
@@ -486,6 +487,7 @@ nav {
   border: 3px solid var(--white);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   padding: 3.75rem;
+
 }
 
 .hero-divider-line {
