@@ -1289,6 +1289,7 @@ p:first-of-type {
 /* --------------------------------------------- */
 /* Memorable Island Escapes Content */
 /* --------------------------------------------- */
+
 #memorable {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1341,6 +1342,51 @@ p:first-of-type {
   margin-bottom: 1.875rem; /* 30px */
 }
 
+.memorable-last-p {
+  margin-bottom: 1.875rem; /* 30px */
+}
+
+/* Default state */
+.memorable-link-container a {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Hover */
+.memorable-link-container a:hover {
+  color: var(--light-teal);
+  text-decoration: underline;
+}
+
+/* Default state */
+.memorable-link-container .link-text-arrow > img {
+  transition: transform 0.5s ease;
+}
+
+/* Hover */
+.memorable-link-container a:hover .link-text-arrow > img {
+  transform: translateX(.9375rem); /* 15px */
+}
+
+.link-text-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-text-arrow > img {
+  margin-left: .9375rem; /* 15px */
+}
+
+.memorable-link-container a .memorable-link-line > img {
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.1); /*10px, 20px*/
+  width: 100%;
+}
+
+
 .card-1,
 .card-2,
 .card-3,
@@ -1366,6 +1412,195 @@ p:first-of-type {
   grid-column: 10 / span 3;
 }
 
+/* --------------------------------------------- */
+/* Responsiveness */
+
+@media only screen and (max-width: 2128px) {
+  .memorable-p-height {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1964px) {
+  .memorable-p-height {
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1761px) {
+  .memorable-p-height {
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 1541px) {
+  .memorable-p-height {
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 1446px) {
+  .memorable-p-height {
+    height: 280px;
+  }
+}
+
+/* Large screens */
+@media only screen and (max-width: 1440px) {
+  .memorable-p-height {
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1393px) {
+  .memorable-p-height {
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 1309px) {
+  .memorable-p-height {
+    height: 260px;
+  }
+}
+
+/* Large screens */
+@media only screen and (max-width: 1200px) {
+  #memorable {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, fr);
+    gap: 3.75rem 1.875rem; /* 60px 30px */
+  }
+
+  /* Section headers */
+  .memorable-headers {
+    grid-area: 1 / 1 / 2 / 7;
+  }
+
+  /* Cards */
+  .card-1 {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+
+  .card-2 {
+    grid-area: 2 / 4 / 3 / 7;
+  }
+
+  .card-3 {
+    grid-area: 3 / 1 / 4 / 4;
+  }
+
+  .card-4 {
+    grid-area: 3 / 4 / 4 / 7;
+  }
+
+  .memorable-p-height {
+    height: 150px;
+  }
+}
+
+/* Notebooks/Laptops */
+@media only screen and (max-width: 1024px) {
+  .memorable-p-height {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  .memorable-p-height {
+    height: 160px;
+  }
+}
+
+@media only screen and (max-width: 832px) {
+  .memorable-p-height {
+    height: 180px;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  #memorable {
+    padding: 1.875rem; /* 30px */
+    gap: 1.875rem 1.875rem; /* 30px 30px */
+  }
+
+  .memorable-headers {
+    grid-area: 1 / 1 / 2 / 7;
+    margin-bottom: 0; 
+  }
+
+  .memorable-headers img {
+    height: auto; 
+    width: 2rem; /* 32px */
+  }
+
+  .memorable-p-height {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 723px) {
+  .memorable-p-height {
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  #memorable {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, fr);
+    gap: 1.875rem; /* 30px */
+    justify-content: center;
+  }
+
+  /* Section headers */
+  .memorable-headers {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+
+  /* Cards */
+  .card-1 {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+
+  .card-2 {
+    grid-area: 3 / 1 / 4 / 4;
+  }
+
+  .card-3 {
+    grid-area: 4 / 1 / 5 / 4;
+  }
+
+  .card-4 {
+    grid-area: 5 / 1 / 6 / 4;
+  }
+
+  .memorable-p-height {
+    height: fit-content;
+  }
+}
+
+/* Smaller Smart Phones */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #memorable {
+    padding: 0.9375rem; /* 15px */
+    gap: 1.875rem 0.9375rem; /* 30px 15px */
+  }
+
+  .memorable-headers img {
+    height: auto; 
+    width: 1.5rem; /* 24px */
+  }
+
+  #memorable h4 {
+    margin-bottom: 0.9375rem; /* 15px */
+  }
+  
+  .memorable-last-p {
+    margin-bottom: 0.9375rem; /* 15px */
+  }
+}
 
 /* --------------------------------------------- */
 /* Footer Content */
