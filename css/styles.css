@@ -1608,8 +1608,8 @@ p:first-of-type {
 /* --------------------------------------------- */
 #membership {
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(12, 1fr);
-  gap: 3.75rem; /* 60px */
+  grid-template: 0.5fr repeat(3, 1fr) / repeat(12, 1fr);
+  gap: 3.75rem 3.75rem; /* 60px 60px */
   width: 100%;
   height: auto;
   padding: 3.75rem; /* 60px */
@@ -1617,20 +1617,49 @@ p:first-of-type {
   color: var(--text-dark);
 }
 
-/* Headings */
-.membership-headings {
-  text-align: center;
+/* Row 1 */
+.membership-row-1 {
   grid-area: 1 / 1 / span 1 / span 12;
 }
 
-.membership-headings h2 {
+.membership-row-1 .membership-headings {
+  text-align: center;
+}
+
+.membership-row-1 .membership-headings h2 {
   color: var(--dark-teal);
   margin-bottom: .9375rem; /* 15px */
 }
 
-.membership-headings h3 {
+.membership-row-1 .membership-headings h3 {
   color: var(--light-teal);
 }
+
+/* Row 2 */
+.membership-row-2 {
+  display: flex;
+  align-items: center;
+  grid-area: 2 / 1 / span 1 / span 12;
+  background-color: var(--body-color);
+}
+
+/* Row 3 */
+.membership-row-3 {
+  display: flex;
+  align-items: center;
+  grid-area: 3 / 1 / span 1 / span 12;
+  background-color: var(--body-color);
+}
+
+/* Row 4 */
+.membership-row-4 {
+  display: flex;
+  align-items: center;
+  grid-area: 4 / 1 / span 1 / span 12;
+  background-color: var(--body-color);
+}
+
+
 
 
 /* --------------------------------------------- */
