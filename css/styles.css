@@ -1606,72 +1606,51 @@ p:first-of-type {
 /* --------------------------------------------- */
 /* Membership Benefits Content */
 /* --------------------------------------------- */
+
+/* Parent Grid*/
 #membership {
   display: grid;
-  grid-template: 0.5fr repeat(3, 1fr) / repeat(12, 1fr);
-  gap: 3.75rem 3.75rem; /* 60px 60px */
-  width: 100%;
-  height: auto;
+  grid-template: 0.5fr repeat(3, 1fr) / 1fr;
+  gap: 60px 0; /* 60px gap between rows */
   padding: 3.75rem; /* 60px */
   background-color: var(--light-mint);
   color: var(--text-dark);
-  
 }
 
-/* --------------------------------------------- */
 /* Row 1 */
 .membership-row-1 {
-  grid-area: 1 / 1 / span 1 / span 12;
-}
-
-.membership-row-1 .membership-headings {
+  /* Span entire width */
+  grid-column: 1 / -1; 
   text-align: center;
 }
 
-.membership-row-1 .membership-headings h2 {
+.membership-row-1 h2 {
   color: var(--dark-teal);
-  margin-bottom: .9375rem; /* 15px */
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
-.membership-row-1 .membership-headings h3 {
+.membership-row-1 h3 {
   color: var(--light-teal);
 }
 
-/* --------------------------------------------- */
-/* Row 2 */
-.membership-row-2 {
-  display: flex;
-  align-items: center;
-  height: 22.8125rem; /* 365px */
-  grid-area: 2 / 1 / span 1 / span 12;
-  background-color: var(--body-color);
-  border-radius: 625rem; /* 100px */
-  border: 3px solid var(--white);
-}
-
-/* --------------------------------------------- */
-/* Row 3 */
-.membership-row-3 {
-  display: flex;
-  align-items: center;
-  height: 22.8125rem; /* 365px */
-  grid-area: 3 / 1 / span 1 / span 12;
-  background-color: var(--body-color);
-  border-radius: 625rem; /* 100px */
-  border: 3px solid var(--white);
-}
-
-/* --------------------------------------------- */
-/* Row 4 */
+/* Nested Grid */
+/* Row 2, 3, and 4 */
+.membership-row-2,
+.membership-row-3,
 .membership-row-4 {
-  display: flex;
-  align-items: center;
-  height: 22.8125rem; /* 365px */
-  grid-area: 4 / 1 / span 1 / span 12;
+  /* Span entire width */
+  grid-column: 1 / -1; 
+  /* Enable grid layout inside these rows */
+  display: grid; 
+  /* 12-column layout inside each row */
+  grid-template-columns: repeat(12, 1fr); 
+  gap: 1.875rem; /* 30px gap between columns */
   background-color: var(--body-color);
-  border-radius: 625rem; /* 100px */
   border: 3px solid var(--white);
+  border-radius: 100px;
+  height: fit-content;
 }
+
 
 /* --------------------------------------------- */
 /* Rows Images */
