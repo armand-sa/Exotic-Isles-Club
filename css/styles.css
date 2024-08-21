@@ -107,7 +107,7 @@ a {
 }
 
 .secondary-button {
-  background-color: var(--light-teal);
+  background-color: var(--dark-teal);
 }
 
 .primary-button:hover,
@@ -118,19 +118,15 @@ a {
 }
 
 .secondary-button:hover {
-  background-color: var(--dark-teal);
+  background-color: #6C8D90;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .primary-button:active,
 .secondary-button:active {
   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
   transform: translateY(2px);
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px; /* 1.875rem */
 }
 
 /* Larger screens */
@@ -1120,7 +1116,7 @@ nav {
   width: 100%;
   height: auto;
   padding: 60px; /* 3.75rem */
-  background-color: var(--dark-teal);
+  background-color: var(--light-teal);
   color: var(--text-light);
 }
 
