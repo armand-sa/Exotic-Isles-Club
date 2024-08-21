@@ -1348,6 +1348,7 @@ p:first-of-type {
 
 /* Default state */
 .memorable-link-container a {
+  color: var(--dark-teal);
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
@@ -1359,6 +1360,7 @@ p:first-of-type {
 .memorable-link-container a:hover {
   color: var(--light-teal);
   text-decoration: underline;
+  font-weight: 400;
 }
 
 /* Default state */
@@ -1607,6 +1609,7 @@ p:first-of-type {
 /* Membership Benefits Content */
 /* --------------------------------------------- */
 
+/* --------------------------------------------- */
 /* Parent Grid*/
 #membership {
   display: grid;
@@ -1616,6 +1619,9 @@ p:first-of-type {
   background-color: var(--light-mint);
   color: var(--text-dark);
 }
+
+/* --------------------------------------------- */
+/* Rows */
 
 /* Row 1 */
 .membership-row-1 {
@@ -1646,14 +1652,12 @@ p:first-of-type {
   grid-template-columns: repeat(12, 1fr); 
   gap: 1.875rem; /* 30px gap between columns */
   background-color: var(--body-color);
-  border: 3px solid var(--white);
   border-radius: 100px;
   height: fit-content;
 }
 
-
 /* --------------------------------------------- */
-/* Rows Images */
+/* Row Images */
 .membership-img-wrapper {
   height: 22.8125rem; /* 365px */
   grid-column: span 4;
@@ -1675,6 +1679,94 @@ p:first-of-type {
   transform: scale(1.1);
 }
 
+/* --------------------------------------------- */
+/* Row content */
+.membership-flex-left,
+.membership-flex-right {
+  display: inline-flex;
+  flex-direction: column;
+  grid-column: span 8;
+  justify-content: center;
+}
+
+/* Row content left */
+.membership-flex-left {
+  text-align: left;
+  margin-left: 1.875rem; /* 30px */
+  margin-right: 3.75rem; /* 60px */
+}
+
+.membership-flex-left h4,
+.membership-flex-right h4,
+.membership-flex-left p,
+.membership-flex-right p {
+  margin-bottom: 1.875rem; /* 30px */
+}
+
+/* Row content right */
+.membership-flex-right {
+  text-align: right;
+  margin-left: 3.75rem; /* 60px */
+  margin-right: 1.875rem; /* 30px */
+}
+
+/* All links */
+
+/* Links left */
+.membership-flex-left a {
+  justify-content: flex-start;
+  /* left 0px */
+  padding: 20px 20px 20px 0;
+}
+
+/* Links right */
+.membership-flex-right a {
+  justify-content: flex-end;
+  /* right 0px */
+  padding: 20px 0 20px 20px;
+}
+
+/* Default state */
+.membership-flex-left a,
+.membership-flex-right a {
+  color: var(--dark-teal);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Hover */
+.membership-flex-left a:hover,
+.membership-flex-right a:hover {
+  color: var(--light-teal);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* Default state arrow */
+.membership-flex-left a > img {
+  margin-right: .9375rem; /* 15px */
+  transition: transform 0.5s ease;
+}
+
+.membership-flex-right a > img {
+  margin-left: .9375rem; /* 15px */
+  transition: transform 0.5s ease;
+}
+
+/* Hover state arrow */
+.membership-flex-left a:hover > img {
+  transform: translateX(-0.9375rem); /* -15px -> move left */
+
+}
+
+.membership-flex-right a:hover > img {
+  transform: translateX(0.9375rem); /* 15px -> move right */
+}
 
 
 
