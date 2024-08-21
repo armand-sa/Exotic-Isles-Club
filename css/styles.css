@@ -114,13 +114,11 @@ a {
 .secondary-button:hover {
   background-color: var(--light-teal);
   box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.5);
-  font-weight: 500;
 }
 
 .secondary-button:hover {
   background-color: #6C8D90;
   color: var(--text-dark);
-  font-weight: 600;
 }
 
 .primary-button:active,
@@ -476,6 +474,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   top: 34%;
+  transform: translate(-50%);
   max-width: 661px; /* 41.3125rem */
   height: fit-content;
   text-align: center;
@@ -1115,7 +1114,7 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   height: auto;
-  padding: 60px; /* 3.75rem */
+  padding: 7.5rem 3.75rem; /* 120px 60px */
   background-color: var(--light-teal);
   color: var(--text-light);
 }
@@ -1175,18 +1174,21 @@ p:first-of-type {
   margin-bottom: 15px; /* .9375rem */
 }
 
-.upcoming-content .secondary-button {
+.upcoming-content .secondary-button,
+.join-us-wrapper .secondary-button {
   margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
-.upcoming-content .secondary-button img {
+.upcoming-content .secondary-button img,
+.join-us-wrapper .secondary-button img {
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
-.upcoming-content .secondary-button:hover img {
+.upcoming-content .secondary-button:hover img,
+.join-us-wrapper .secondary-button:hover img {
   transform: translateX(10px);
 }
 
@@ -1292,7 +1294,7 @@ p:first-of-type {
   gap: 1.875rem; /* 30px */
   width: 100%;
   height: auto;
-  padding: 3.75rem; /* 60px */
+  padding: 7.5rem 3.75rem; /* 120px 60px */
   background-color: var(--body-color);
   color: var(--text-dark);
 }
@@ -1611,7 +1613,7 @@ p:first-of-type {
   display: grid;
   grid-template: 0.5fr repeat(3, 1fr) / 1fr;
   gap: 60px 0; /* 60px gap between rows */
-  padding: 3.75rem; /* 60px */
+  padding: 7.5rem 3.75rem; /* 120px 60px */
   background-color: var(--light-mint);
   color: var(--text-dark);
 }
@@ -1957,13 +1959,50 @@ p:first-of-type {
   }
 }
 
+
+/* --------------------------------------------- */
+/* Join Us Content */
+/* --------------------------------------------- */
+#join {
+  padding: 7.5rem 3.75rem; /* 120px 60px */
+  background-image: url(../assets/images/join-us.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-us-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 661px; /* 41.3125rem */
+  height: fit-content;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 100px;
+  border: .1875rem solid var(--white);
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.5);
+  padding: 60px;
+}
+
+.join-us-wrapper h2 {
+  color: var(--dark-teal);
+  margin-bottom: .625rem; /* 10px */
+}
+
+.join-us-wrapper h3 {
+  color: var(--light-teal);
+}
+
 /* --------------------------------------------- */
 /* Footer Content */
 /* --------------------------------------------- */
-footer {
-  background-color: var(--light-teal);
+#contact {
+  padding: 7.5rem 3.75rem; /* 120px 60px */
+  background-color: var(--body-color);
   height: auto;
   width: 100%;
-  /* Ensure it still takes up full height if content is minimal */
-  min-height: 100vh;
 }
