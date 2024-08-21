@@ -1689,18 +1689,18 @@ p:first-of-type {
   justify-content: center;
 }
 
-/* Row content left */
-.membership-flex-left {
-  text-align: left;
-  margin-left: 1.875rem; /* 30px */
-  margin-right: 3.75rem; /* 60px */
-}
-
 .membership-flex-left h4,
 .membership-flex-right h4,
 .membership-flex-left p,
 .membership-flex-right p {
   margin-bottom: 1.875rem; /* 30px */
+}
+
+/* Row content left */
+.membership-flex-left {
+  text-align: left;
+  margin-left: 1.875rem; /* 30px */
+  margin-right: 3.75rem; /* 60px */
 }
 
 /* Row content right */
@@ -1768,7 +1768,198 @@ p:first-of-type {
   transform: translateX(0.9375rem); /* 15px -> move right */
 }
 
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  /* --------------------------------------------- */
+  /* Parent Grid*/
+  #membership {
+    grid-template: 117.38px repeat(3, 1fr) / 1fr;
+    gap: 30px 0; /* 30px gap between rows */
+    padding: 1.875rem; /* 30px */
+  }
+  .membership-row-1 h2 {
+    margin-bottom: 0.9375rem; /* 0px */
+  }
+  /* Icon */
+  .membership-headings img {
+    width: 30px;
+    height: auto;
+  }
+  /* Nested Grid */
+  /* Row 2, 3, and 4 */
+  .membership-row-2,
+  .membership-row-3,
+  .membership-row-4 {
+    gap: 0; /* 0px gap between columns */
+  }
+  /* --------------------------------------------- */
+  /* Row Images */
+  .membership-img-wrapper {
+    grid-column: span 6;
+  }
+  /* --------------------------------------------- */
+  /* Row content */
+  .membership-flex-left,
+  .membership-flex-right {
+    grid-column: span 6;
+  }
+  .membership-flex-left h4,
+  .membership-flex-right h4,
+  .membership-flex-left p,
+  .membership-flex-right p {
+    margin-bottom: .9375rem; /* 15px */
+  }
+  /* Row content left */
+  .membership-flex-left {
+    margin-left: .9375rem; /* 15px */
+    margin-right: 1.875rem; /* 30px */
+  }
+  /* Row content right */
+  .membership-flex-right {
+    margin-left: 1.875rem; /* 30px */
+    margin-right: .9375rem; /* 15px */
+  }
+  /* All links */
+  /* Links left */
+  .membership-flex-left a {
+    justify-content: flex-start;
+    /* left 0px */
+    padding: 10px 10px 10px 0;
+  }
+  /* Links right */
+  .membership-flex-right a {
+    justify-content: flex-end;
+    /* right 0px */
+    padding: 10px 0 10px 10px;
+  }
+  /* Default state */
+  .membership-flex-left a,
+  .membership-flex-right a {
+    color: var(--dark-teal);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
 
+/* Smaller Tablets Phones */
+@media only screen and (max-width: 555px) {
+  /* --------------------------------------------- */
+  /* Parent Grid*/
+  #membership {
+    gap: 30px 0; /* 30px gap between rows */
+    padding: 1.875rem; /* 30px */
+  }
+  /* Nested Grid */
+  /* Row 2, 3, and 4 */
+  .membership-row-2,
+  .membership-row-3,
+  .membership-row-4 {
+    /* 12-column layout with two rows */
+    grid-template: 1fr 0.5fr / repeat(12, 1fr); 
+    gap: 1.875rem 0; /* 30px gap between rows | columns 0 */
+  }
+  /* --------------------------------------------- */
+  /* Row Images */
+  .membership-img-wrapper {
+    height: 22.8125rem; /* 365px */
+    grid-area: 1 / 1 / 2 / -1 ;
+  }
+  /* --------------------------------------------- */
+  /* Row content */
+  .membership-flex-left,
+  .membership-flex-right {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    grid-column: span 12;
+    height: fit-content;
+  }
+  .membership-flex-left h4,
+  .membership-flex-right h4 {
+    margin-bottom: 0.9375rem; /* 15px */
+  }
+  .membership-flex-left p,
+  .membership-flex-right p {
+    margin-bottom: 0; /* 0px */
+  }
+  /* Row content left */
+  .membership-flex-left,
+  .membership-flex-right {
+    margin: 0 1.875rem; /* 30px */
+    text-align: center;
+  }
+  /* All links */
+  /* Links left */
+  .membership-flex-left a,
+  .membership-flex-right a  {
+    justify-content: center;
+    /* left 0px */
+    padding: 0 auto;
+    text-align: right;
+  }
+  /* Default state */
+  .membership-flex-left a,
+  .membership-flex-right a {
+    padding: 30px;
+
+  }
+  /* Hover */
+  .membership-flex-left a:hover,
+  .membership-flex-right a:hover {
+    color: var(--light-teal);
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  /* Default state arrow */
+  .membership-flex-left a > img {
+    order: 2;
+    margin-left: .9375rem; /* 15px */
+    /* Flip arrow horizontally */
+    transform: scaleX(-1);
+  }
+  .membership-flex-right a > img {
+    margin-left: .9375rem; /* 15px */
+  }
+}
+
+/* Smaller Smart Phones */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* --------------------------------------------- */
+  /* Parent Grid*/
+  #membership {
+    grid-template-rows: 123.58px repeat(3, 1fr);
+    gap: 15px 0; /* 15px gap between rows */
+    padding: 0.9375rem; /* 15px */
+  }
+  /* Row content left */
+  .membership-flex-left,
+  .membership-flex-right {
+    margin: 0 .9375rem; /* 15px */
+    text-align: center;
+  }
+  /* All links */
+  /* Links left */
+  .membership-flex-left a,
+  .membership-flex-right a  {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align content at the bottom */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+  }
+  /* Arrow images */
+  .membership-flex-left a > img,
+  .membership-flex-right a > img {
+      margin-top: 5px; /* Space between text and arrow */
+  }
+}
 
 /* --------------------------------------------- */
 /* Footer Content */
