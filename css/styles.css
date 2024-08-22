@@ -2260,6 +2260,28 @@ input::placeholder {
   justify-content: flex-start; /* Top */
 }
 
+.contact-column-three p {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--dark-teal);
+}
+
+.contact-column-three p:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.contact-column-three a {
+  cursor: pointer;
+  color: var(--dark-teal);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-column-three a:hover {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 /* --------------------------------------------- */
 /* All 3 column Styles, 2nd row */
 
@@ -2268,6 +2290,7 @@ input::placeholder {
 .contact-column-two h4,
 .contact-column-three h4 {
   color: var(--dark-teal);
+  text-align: center;
 }
 
 /* Wave lines */
@@ -2276,7 +2299,83 @@ input::placeholder {
 .contact-column-three .contact-line {
   margin: 1.875rem auto; /* 30px */
   box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.1); /*10px, 20px*/
+  max-width: 300px;
 }
+
+/* --------------------------------------------- */
+/* Responsiveness */
+
+/* Large screens */
+@media only screen and (max-width: 1200px) {
+  /* Wave lines */
+  .contact-column-one .contact-line,
+  .contact-column-two .contact-line,
+  .contact-column-three .contact-line {
+    max-width: 200px;
+  }
+}
+
+/* Small Laptops */
+@media only screen and (max-width: 910px) {
+  #contact {
+    padding: 7.5rem 3.75rem; /* 120px 60px */
+    grid-template: repeat(4, auto) / 1fr ; /* 150px */
+    row-gap: 3.75rem;
+  }
+  /* --------------------------------------------- */
+  /* Top Logo - Column 1 to 3 -> Row 1  */
+  .contact-logo {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 2 */
+  .contact-column-one {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 3 */
+  .contact-column-two {
+    grid-area: 3 / 1 / 4 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 4 */
+  .contact-column-three {
+    grid-area: 4 / 1 / 5 / -1;
+  }
+  /* Wave lines */
+  .contact-column-one .contact-line,
+  .contact-column-two .contact-line,
+  .contact-column-three .contact-line {
+    max-width: 100%;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  #contact {
+    padding: 1.875rem; /* 30px */
+    grid-template: repeat(4, auto) / 1fr ; /* 150px */
+    row-gap: 1.875rem;
+  }
+  /* --------------------------------------------- */
+  /* Top Logo - Column 1 to 3 -> Row 1  */
+  .contact-logo {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 2 */
+  .contact-column-one {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 3 */
+  .contact-column-two {
+    grid-area: 3 / 1 / 4 / -1;
+  }
+  /* Navigational Blocks - Column 1 -> Row 4 */
+  .contact-column-three {
+    grid-area: 4 / 1 / 5 / -1;
+  }
+}
+
+/* Smaller Smart Phones */
+/* @media only screen and (min-width: 320px) and (max-width: 480px) {
+} */
 
 
 
@@ -2288,11 +2387,12 @@ input::placeholder {
 /* --------------------------------------------- */
 #legal {
   background-color: var(--dark-teal);
-  padding: 1.875rem; /* 30px */
+  padding: 1.875rem 0; /* 30px */
   color: var(--text-light);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .footer-legal {
@@ -2304,7 +2404,6 @@ input::placeholder {
 .footer-legal p {
   font-size: 1rem;
 }
-
 
 .footer-legal-links {
   display: flex;
@@ -2330,25 +2429,3 @@ input::placeholder {
 .footer-legal-links .legal-seperator {
   margin: 0 10px;
 }
-
-/* --------------------------------------------- */
-/* Responsiveness */
-/* Large screens */
-/* @media only screen and (max-width: 1440px) {
-} */
-
-/* Large screens */
-/* @media only screen and (max-width: 1200px) {
-} */
-
-/* Notebooks/Laptops */
-/* @media only screen and (max-width: 1024px) {
-} */
-
-/* Tablets */
-/* @media only screen and (max-width: 768px) {
-} */
-
-/* Smaller Smart Phones */
-/* @media only screen and (min-width: 320px) and (max-width: 480px) {
-} */
