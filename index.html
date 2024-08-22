@@ -86,8 +86,7 @@
           <!-- Dropdown Menu container -->
           <div class="dropdown">
             <div class="dropdown-content">
-              <a href="#hero">Home (Top of Page)</a>
-              <a href="#hero">About Us (Top of Page)</a>
+              <a href="#hero">Home / About (To Top)</a>
               <a href="#upcoming">Upcoming Adventure</a>
               <a href="#memorable">Memorable Escapes</a>
               <a href="#membership">Membership Benefits</a>
@@ -326,34 +325,55 @@
   <!-- Footer Content -->
   <!-- --------------------------------------------- -->
   <footer id="contact">
-    <section class="contact-logo">
-      <a href="#hero"><img src="./assets/icons/tropical-fish-icon.webp" alt="Click the icon to return to the top of the page"></a>
-    </section>
-    <section class="contact-three-container">
-      <div class="contact-column-one">
-        <h4>Navigation Links</h4>
-        <img src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+    <!-- Top Logo - Column 1 to 3 -> Row 1 -->
+    <div class="contact-logo">
+      <a href="#hero" aria-label="Click the icon to return to the top of the page"><img src="./assets/icons/tropical-fish-icon.webp" alt="Click the icon to return to the top of the page"></a>
+    </div>
 
+    <!-- Navigational Blocks - Column 1 -> Row 2 -->
+    <div class="contact-column-one">
+      <h4>Navigation Links</h4>
+      <img class="contact-line" src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+      <div class="contact-flex-right">
+        <a href="#hero">Home / About (to Top)
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
+        <a href="#upcoming">Upcoming Adventure
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
+        <a href="#memorable">Memorable Island Escapes
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
+        <a href="#membership">Membership Benefits
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
+        <a href="#join">Join Us
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
+        <a href="#contact">Contact Us
+          <img src="./assets/icons/link-right.webp" alt="" aria-hidden="true">
+        </a>
       </div>
-      <div class="contact-column-one">
-        <h4>Subscribe to Our Newsletter</h4>
-        <img src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+    </div>
 
-      </div>
-      <div class="contact-column-one">
-        <h4>Contact Information</h4>
-        <img src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+    <!-- Navigational Blocks - Column 2 -> Row 2 -->
+    <div class="contact-column-two">
+      <h4>Subscribe to Our Newsletter</h4>
+      <img class="contact-line" src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+    </div>
 
-
-      </div>
-    </section>
+    <!-- Navigational Blocks - Column 3 -> Row 2 -->
+    <div class="contact-column-three">
+      <h4>Contact Information</h4>
+      <img class="contact-line" src="./assets/icons/wave-line.webp" alt="" aria-hidden="true">
+    </div>
 
   </footer>
 
   <!-- --------------------------------------------- -->
   <!-- Legal Footer Content -->
   <!-- --------------------------------------------- -->
-  <section id="legal">
+  <footer id="legal">
     <div class="footer-legal">
       <p>&copy; 2024 Exotic Isles Club. All rights reserved.</p>
       <ul class="footer-legal-links">
@@ -364,7 +384,7 @@
         <li><a href="">Terms of Service</a></li>
       </ul>
     </div>
-  </section>
+  </footer>
   
 </body>
 </html>
