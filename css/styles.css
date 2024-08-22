@@ -2058,6 +2058,7 @@ p:first-of-type {
   color: var(--dark-teal);
 }
 
+/* --------------------------------------------- */
 /* Top Logo - Column 1 to 3 -> Row 1  */
 .contact-logo {
   grid-area: 1 / 1 / 2 / -1;
@@ -2087,44 +2088,14 @@ p:first-of-type {
   transform: translateY(2px);
 }
 
+/* --------------------------------------------- */
 /* Navigational Blocks - Column 1 -> Row 2 */
 .contact-column-one {
   grid-area: 2 / 1 / 3 / 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-/* Navigational Blocks - Column 2 -> Row 2 */
-.contact-column-two {
-  grid-area: 2 / 2 / 3  / 3;
-  justify-self: center; /* Center horizontally */
-  text-align: center;
-}
-
-/* Navigational Blocks - Column 3 -> Row 2 */
-.contact-column-three {
-  grid-area: 2 / 3 / 3  / 4;
-  justify-self: center; /* Center horizontally */
-  text-align: center;
-}
-
-/* Footer Nav column Contents */
-
-/* Dark Teal Header */
-.contact-column-one h4,
-.contact-column-two h4,
-.contact-column-three h4 {
-  color: var(--dark-teal);
-}
-
-/* Wave lines */
-.contact-column-one .contact-line,
-.contact-column-two .contact-line,
-.contact-column-three .contact-line {
-  margin: 1.875rem auto; /* 30px */
-  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.1); /*10px, 20px*/
+  justify-content: flex-start; /* Top */
 }
 
 /* All links */
@@ -2171,6 +2142,143 @@ p:first-of-type {
 .contact-flex-right a:hover > img {
   transform: translateX(0.9375rem); /* 15px -> move right */
 }
+
+/* --------------------------------------------- */
+/* Navigational Blocks - Column 2 -> Row 2 */
+.contact-column-two {
+  grid-area: 2 / 2 / 3  / 3;
+  justify-self: center; /* Center horizontally */
+  justify-content: flex-start; /* Top */
+  text-align: center;
+}
+
+.contact-column-two p {
+  margin-bottom: 20px;
+}
+
+/* Subscribe */
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #749598;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.25rem; /* Space between input and button */
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.25); /* Slight inset shadow for depth */
+}
+
+
+.input-icon {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon img {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+}
+
+/* This rule sets the color of the text typed in the input box */
+input[type="email"] {
+  /* Allows the input field to grow and fill the available space within its container */
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  color: var(--dark-teal);
+  outline: none;
+}
+
+/* Adjust the placeholder color */
+input::placeholder {
+  color: #749598;
+  opacity: 1; /* Ensure the color is not lightened by browser default */
+}
+
+/* Visually hidden label for accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Social media */
+.social-medi-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.social-medi-icons-container > a {
+  cursor: pointer;
+}
+
+.social-medi-icons-container > a:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.social-medi-icons-container > a img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.social-medi-icons-container > a img:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pressed */
+.social-medi-icons-container > a img:active {
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+
+/* --------------------------------------------- */
+/* Navigational Blocks - Column 3 -> Row 2 */
+.contact-column-three {
+  grid-area: 2 / 3 / 3  / 4;
+  justify-self: center; /* Center horizontally */
+  text-align: center;
+  justify-content: flex-start; /* Top */
+}
+
+/* --------------------------------------------- */
+/* All 3 column Styles, 2nd row */
+
+/* Dark Teal Header */
+.contact-column-one h4,
+.contact-column-two h4,
+.contact-column-three h4 {
+  color: var(--dark-teal);
+}
+
+/* Wave lines */
+.contact-column-one .contact-line,
+.contact-column-two .contact-line,
+.contact-column-three .contact-line {
+  margin: 1.875rem auto; /* 30px */
+  box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.1); /*10px, 20px*/
+}
+
+
 
 
 
