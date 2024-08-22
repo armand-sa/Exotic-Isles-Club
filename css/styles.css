@@ -36,7 +36,7 @@ body {
   /* Typographic Color */
   color: var(--text-dark);
   /* Fix horizontal overflow */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /* Heading Styles */
@@ -2052,6 +2052,52 @@ p:first-of-type {
   height: auto;
   width: 100%;
 }
+
+
+/* --------------------------------------------- */
+/* Footer Content */
+/* --------------------------------------------- */
+#contact {
+  padding: 3.75rem; /* 60px */
+  display: grid;
+  grid-template: 9.375rem 1fr / repeat(3, 1fr); /* 150px */
+  /* Rows 0, columns 60px */
+  gap: 0 3.75rem;
+  color: var(--dark-teal);
+}
+
+/* Top Logo */
+.contact-logo {
+  grid-area: 1 / 1 / span 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-logo > a {
+  cursor: pointer;
+}
+
+.contact-logo > a img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.contact-logo > a img:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pressed */
+.contact-logo > a img:active {
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+/* Navigational Blocks */
+
 
 
 /* --------------------------------------------- */
