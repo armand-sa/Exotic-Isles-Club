@@ -1,7 +1,7 @@
 # Challenge Project: Responsive Club Website
 ## Front-End Engineer Path - Improved Styling with CSS
 
-**Link to Live Site:** [Exotic Isles Club]()
+**Link to Live Site:** [Exotic Isles Club](https://armand-sa.github.io/Exotic-Isles-Club/)
 
 ![Screenshot of Exotic Isles Club](./assets/images/screencapture-127-0-0-1-5500-2024-08-23-14_20_04.webp)
 
